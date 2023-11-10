@@ -1,6 +1,6 @@
 # mnm - minimalist Note manager
 
-A minimalist note manager focused around three function, **creating**, **searching** and **arranging** notes in
+A minimalist note manager focused around three functions: **creating**, **searching** and **arranging** notes in
 directories. Created with the help of **rg** and **fzf**.
 
 ## Requirements
