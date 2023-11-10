@@ -1,0 +1,2 @@
+# mnm
+Minimal Note Management
