@@ -4,17 +4,17 @@
 # create config if it doesn't exist and read it.
 #
 create_config() {
-    mkdir ~/.config 2>/dev/null ; touch ~/.config/nmn.conf 2>/dev/null
-    printf "path=~/notes\ndirectories=%s" "\"notes daily\"" > ~/.config/nmn.conf
-    echo "Config file created at ~/.config/nmn.conf"
+    mkdir ~/.config 2>/dev/null ; touch ~/.config/mnm.conf 2>/dev/null
+    printf "path=~/notes\ndirectories=%s" "\"notes daily\"" > ~/.config/mnm.conf
+    echo "Config file created at ~/.config/mnm.conf"
 }
 
 read_config() {
-    # shellcheck source=./nmn.conf
-    . ~/.config/nmn.conf
+    # shellcheck source=./mnm.conf
+    . ~/.config/mnm.conf
 }
 
-if [ -f ~/.config/nmn.conf ]; then read_config; else create_config; read_config; fi
+if [ -f ~/.config/mnm.conf ]; then read_config; else create_config; read_config; fi
 
 #
 # create directories if they don't exist.

@@ -10,15 +10,15 @@ directories. Created with the help of **rg** and **fzf**.
 ## Recommended Installation method
 
 ```shell
-ln -s "$(cd "$(dirname "$0")" && pwd)"/nmn.sh "$HOME"/.local/bin/mnm
+ln -s "$(cd "$(dirname "$0")" && pwd)"/mnm.sh "$HOME"/.local/bin/mnm
 ```
 
-Create a symlink between `nmn.sh` and `./local/bin/nmn`, or you can run `install.sh` which will do the same. After this
-the command `nmn` will be available in your system.
+Create a symlink between `mnm.sh` and `./local/bin/mnm`, or you can run `install.sh` which will do the same. After this
+the command `mnm` will be available in your system.
 
 ## Configuration
 
-First start will create the config file in the following path: `~/.config/nmn.conf`
+First start will create the config file in the following path: `~/.config/mnm.conf`
 
 - `path` defines the root of your notes
 - `directories` is the list of the directories you collect your notes
@@ -31,17 +31,17 @@ after some time of usage the notes will be not migrated automatically.
 ### Create a note
 
 ```shell
-nmn -c
+mnm -c
 ```
 
 ### Search in notes
 
 ```shell
-nmn -s
+mnm -s
 ```
 
 ### Search in notes in a directory
 
 ```shell
-nmn -d
+mnm -d
 ```
