@@ -10,7 +10,7 @@ directories. Created with the help of **rg** and **fzf**.
 ## Recommended Installation method
 
 ```shell
-ln -s "$(cd "$(dirname "$0")" && pwd)"/nmn.sh "$HOME"/.local/bin/n
+ln -s "$(cd "$(dirname "$0")" && pwd)"/nmn.sh "$HOME"/.local/bin/mnm
 ```
 
 Create a symlink between `nmn.sh` and `./local/bin/nmn`, or you can run `install.sh` which will do the same. After this
