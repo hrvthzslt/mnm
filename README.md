@@ -3,6 +3,8 @@
 A minimalist note manager focused around three functions: **creating**, **searching** and **arranging** notes in
 directories. Created with the help of **rg** and **fzf**.
 
+[![asciicast](https://asciinema.org/a/UciUDOINZTiRMLnESDB96gByr.svg)](https://asciinema.org/a/UciUDOINZTiRMLnESDB96gByr)
+
 ## Requirements
 
 **Ripgrep** (rg) and **Fzf** (fzf) is installed in your system.
