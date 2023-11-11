@@ -5,11 +5,12 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: apt update
-      - run: apt install shellcheck
       - name: Check out repository code
         uses: actions/checkout@v4
-      - name: Shellcheck
-        run: shellcheck -x mnm.sh
+      - name : Shellcheck
+        uses: sudo-bot/action-shellcheck@latest
+        with:
+          # https://github.com/koalaman/shellcheck#how-to-use
+          cli-args: "-x mnm.sh"
       - name: Hundred line check
         run: '[ $(wc -l < mnm.sh) -eq 100 ] && exit 0 || exit 1'
