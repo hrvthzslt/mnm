@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 
-#
+# mnm - minimalist Note manager
+
 # create config if it doesn't exist and read it.
 #
 create_config() {
@@ -16,14 +17,12 @@ read_config() {
 
 if [ -f ~/.config/mnm.conf ]; then read_config; else create_config; read_config; fi
 
-#
 # create directories if they don't exist.
 #
 for directory in $directories; do
     [ -d "$path/$directory" ] || mkdir -p "$path/$directory" 2>/dev/null
 done
 
-# 
 # Hep text
 #
 help() {
@@ -35,7 +34,6 @@ help() {
     exit 1
 }
 
-#
 # Create note
 #
 get_note_file_name() {
@@ -64,6 +62,8 @@ create_note() {
     $EDITOR "$filepath"
 }
 
+# Search all notes or in directory
+#
 search_in_path() {
     found_file_path=$(rg '' "$1" | fzf --delimiter=/ --with-nth -1 | cut -d":" -f1;)
     [ -z "$found_file_path" ] && exit 1
